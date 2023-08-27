@@ -1,0 +1,51 @@
+{
+    "product": [
+        {
+            "image_url": "https://n.nordstrommedia.com/id/sr3/35702adb-e6a0-4d75-afd2-fcff41d0d0fa.jpeg?q=45&dpr=2&h=365.31&w=230",
+            "title": "Print Footie (Baby), Image",
+            "subtitle": "New Markdown",
+            "subtext": "NORDSTROM BABY",
+            "subletter": "Print Footie (Baby)",
+            "price": "$ 46.40",
+            "lprice": "$ 46.87"
+        },
+
+        {
+            "image_url": "https://n.nordstrommedia.com/id/sr3/f5e38d96-d0d1-4a84-a65d-889f0ad0759c.jpeg?q=45&dpr=2&h=365.31&w=230",
+            "title": "SBL GNAPHALIUM POLYCEPHALUM DILUTION 1000 CH",
+            "subtitle": "SBL GELSEMIUM SEMPERVIRENS",
+            "subtext": "bottle of 30 ml Dilution",
+            "subletter": "Print Footie (Baby)",
+            "price": "$ 94.05",
+            "lprice": "$ 95.00"
+        },
+
+        {
+            "image_url": "https://n.nordstrommedia.com/id/sr3/0e97fc22-cd55-4255-91ee-59973d242ced.jpeg?q=45&dpr=2&h=365.31&w=230",
+            "title": "MUSCLETECH HYDROXYCUT HARDCORE NEXT GEN CAPSULE ",
+            "subtitle": "MUSCLETECH HYDROXYCUT HAR",
+            "subtext": "bottle of 100 capsules",
+            "subletter": "Print Footie (Baby)",
+            "price": "Rs.2,969.01",
+            "lprice": "Rs.2,999.00"
+        },
+
+        {
+            "image_url": "https://n.nordstrommedia.com/id/sr3/91e7487d-a240-4da3-8aea-80b2b6c92e49.jpeg?q=45&dpr=2&h=365.31&w=230",
+            "title": "DOLTOL GEL",
+            "subtitle": "DOLTOL GEL",
+            "subtext": "tube of 30 gm Gel",
+            "price": "Rs.58.90",
+            "lprice": "Rs.59.50"
+        },
+
+        {
+            "image_url": "https://n.nordstrommedia.com/id/sr3/d9361715-9c18-42d1-a580-cefccdd23cfa.jpeg?q=45&dpr=2&h=365.31&w=230",
+            "title": "TOSS K PASTE",
+            "subtitle": "TOSS K PASTE…",
+            "subtext": "tube of 50 gm Paste",
+            "price": "Rs.74.25",
+            "lprice": "Rs.75.00"
+        }
+    ]
+}
