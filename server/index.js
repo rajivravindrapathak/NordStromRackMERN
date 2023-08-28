@@ -2,8 +2,10 @@ const express = require("express")
 const cors = require("cors")
 
 const {userController} = require("./routes/user.routes")
+const {productController} = require("./routes/product.routes")
 
 const { connection } = require("./config/db")
+const { authentication } = require("./middleware/authentication")
 require('dotenv').config()
 
 
@@ -20,6 +22,9 @@ app.get("/", (req, res) => {
 app.use(cors())
 
 app.use("/", userController)
+app.use("/", productController)
+
+app.use(authentication)
 
 app.listen(PORT, async ()=> {    
     try {
