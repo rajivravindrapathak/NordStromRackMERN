@@ -8,7 +8,7 @@ const productController = Router()
 productController.get('/products', async (req, res) => {
     try {
       const products = await ProductModel.find();
-      res.json(products);
+      res.status(200).json({ msg: "products get successfully", data: products});
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
     }
