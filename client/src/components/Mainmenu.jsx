@@ -2,6 +2,20 @@ import { Menu } from "antd";
 import { Link } from "react-router-dom";
 
 export default function Mainmenu() {
+    // const menuItem=[
+    //     {name:"New", value:"/"},
+    //     {name:"Clearence", value:"/clearence"},
+    //     {name:"Support", value:"/supportpage"},
+    //     {name:"New", value:"/"},
+    //     {name:"New", value:"/"},
+    //     {name:"New", value:"/"},
+    //     {name:"New", value:"/"},
+    //     {name:"New", value:"/"},
+    //     {name:"New", value:"/"},
+    //     {name:"New", value:"/"},
+    //     {name:"New", value:"/"},
+
+    // ]
   return (
     <div>
       <Menu mode="horizontal" className="main-menu">
@@ -30,7 +44,7 @@ export default function Mainmenu() {
           <Link to="/bags-accessories">Bags & Accessories</Link>
         </Menu.Item>
         <Menu.Item key="home">
-          <Link to="/home">home</Link>
+          <Link to="/">home</Link>
         </Menu.Item>
         <Menu.Item key="beauty">
           <Link to="/beauty">beauty</Link>
