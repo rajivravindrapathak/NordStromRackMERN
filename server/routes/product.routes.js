@@ -12,12 +12,12 @@ productController.get('/products', async (req, res) => {
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
     }
-});
+}); 
 
 // Get a single product by ID
-productController.get('/products/:id', async (req, res) => {
+productController.get('/products/:productId', async (req, res) => {
     try {
-      const product = await ProductModel.findById(req.params.id);
+      const product = await ProductModel.findById(req.params.productId);
       if (!product) {
         return res.status(404).json({ error: 'Product not found' });
       }
