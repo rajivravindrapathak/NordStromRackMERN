@@ -13,20 +13,20 @@ export default function ProductBox(props) {
 
   return (
     <Row gutter={[16, 16]} className="ProductBox">
-      {data &&
-        data.map((item, index) => {
-          return (
-            <Col
-              xs={24}
-              sm={24}
-              md={6}
-              lg={6}
-              xl={6}
-              xxl={6}
-              key={index}
-              className="ProductBox-container"
-            >
-              <Row className="ProductBox-content">
+        {data &&
+          data.map((item, index) => {
+            return (
+              <Col
+                xs={24}
+                sm={24}
+                md={6}
+                lg={6}
+                xl={6}
+                xxl={6}
+                key={index}
+                className="ProductBox-container"
+              >
+                <Row className="ProductBox-content">
                 <Col span={24}>
                     <img style={{ width: "100%"}} src={item.image_url} />
                   <h2>

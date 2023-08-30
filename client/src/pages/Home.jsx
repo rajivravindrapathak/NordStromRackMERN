@@ -32,57 +32,10 @@ const HomePage = () => {
     },
   ];
 
-  // let planData = [
-  //     {
-  //       image_url: "https://n.nordstrommedia.com/id/sr3/35702adb-e6a0-4d75-afd2-fcff41d0d0fa.jpeg?q=45&dpr=2&h=365.31&w=230",
-  //       title: "Print Footie (Baby)",
-  //       subtitle: "New Markdown",
-  //       subtext: "NORDSTROM BABY",
-  //       subletter: "Print Footie (Baby)",
-  //       price: "$ 46.40",
-  //       lprice: "$ 46.87"
-  //     },
-  //     {
-  //       image_url: "https://n.nordstrommedia.com/id/sr3/35702adb-e6a0-4d75-afd2-fcff41d0d0fa.jpeg?q=45&dpr=2&h=365.31&w=230",
-  //       title: "Print Footie (Baby)",
-  //       subtitle: "New Markdown",
-  //       subtext: "NORDSTROM BABY",
-  //       subletter: "Print Footie (Baby)",
-  //       price: "$ 46.40",
-  //       lprice: "$ 46.87"
-  //     },
-  //     {
-  //       image_url: "https://n.nordstrommedia.com/id/sr3/35702adb-e6a0-4d75-afd2-fcff41d0d0fa.jpeg?q=45&dpr=2&h=365.31&w=230",
-  //       title: "Print Footie (Baby)",
-  //       subtitle: "New Markdown",
-  //       subtext: "NORDSTROM BABY",
-  //       subletter: "Print Footie (Baby)",
-  //       price: "$ 46.40",
-  //       lprice: "$ 46.87"
-  //     },
-  //     {
-  //       image_url: "https://n.nordstrommedia.com/id/sr3/35702adb-e6a0-4d75-afd2-fcff41d0d0fa.jpeg?q=45&dpr=2&h=365.31&w=230",
-  //       title: "Print Footie (Baby), Image",
-  //       subtitle: "New Markdown",
-  //       subtext: "NORDSTROM BABY",
-  //       subletter: "Print Footie (Baby)",
-  //       price: "$ 46.40",
-  //       lprice: "$ 46.87"
-  //     },
-  // ];
-
   const getProductData = async () => {
     debugger;
-    // const token = localStorage.getItem('token');
-    // if(!token) {
-    //   return navigate('/login'); 
-    // }
     try {
-      const response = await axios.get("http://localhost:4001/products", {
-          // headers: {
-          //     Authorization: `Bearer ${token}`,
-          // },
-      }) 
+      const response = await axios.get("http://localhost:4001/products" ) 
       console.log("API Response:", response.data.data);
       setProductData(response.data.data)
       if(response.data.success) {
