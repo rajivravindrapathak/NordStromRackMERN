@@ -22,7 +22,7 @@ const SignUp = () => {
   const handleSignUp = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:4001/signup",
+        "https://nord-strom-rack-mern.vercel.app/signup",
         formData
       );
       console.log("Sign-up successful:", response.data);

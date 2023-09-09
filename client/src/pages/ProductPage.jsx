@@ -11,7 +11,7 @@ const ProductPage = () => {
         
         debugger;
         try {
-          const response = await axios.get("http://localhost:4001/products" ) 
+          const response = await axios.get("https://nord-strom-rack-mern.vercel.app/products" ) 
           console.log("API Response:", response.data.data);
           setProductData(response.data.data)
           if(response.data.success) {
@@ -27,12 +27,12 @@ const ProductPage = () => {
 
     useEffect(() => {
         getProductData()
-    })
+    }, [])
 
     return ( 
         <>
-             <Row gutter={[16, 16]} className="ProductBox">
-                {productData &&
+            <Row gutter={[16, 16]} className="ProductBox">
+                {productData.length > 0 &&
                     productData.map((item, index) => {
                         return (
                         <Col
@@ -42,7 +42,7 @@ const ProductPage = () => {
                             lg={6}
                             xl={6}
                             xxl={6}
-                            key={index}
+                            key={item.id}
                             className="ProductBox-container"
                         >
                             <Row className="ProductBox-content">
@@ -64,7 +64,7 @@ const ProductPage = () => {
                                         <p className="ProductBox-content-info-text1">
                                         {item.lprice}
                                         </p>
-                                        <Button className="booknow-btn"><Link to={`/products/${item.productId}`}> + Quick View!</Link></Button>
+                                        <Button className="booknow-btn"><Link to={`/products/${item._id}`}> + Quick View!</Link></Button>
                                     </Col>
                                 </Row>
                             </Row>

@@ -1,6 +1,7 @@
 import { Button, Col, Row } from "antd";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function ProductBox(props) {
   const [data, setData] = useState();
@@ -45,7 +46,7 @@ export default function ProductBox(props) {
                     <p className="ProductBox-content-info-text1">
                       {item.lprice}
                     </p>
-                    <Button className="booknow-btn">Book Now!</Button>
+                    <Button className="booknow-btn"><Link to='/productpage'>Book Now!</Link></Button>
                   </Col>
                 </Row>
               </Row>

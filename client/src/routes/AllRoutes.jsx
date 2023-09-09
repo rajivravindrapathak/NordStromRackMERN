@@ -22,7 +22,7 @@ const AllRoutes = () => {
                     <Route path="/products/:id" element={ <ProductDetailPage />} />
                     <Route path="/men" element={ <Men />} /> 
                 </Routes>
-                <Footer />
+                <Footer />  
             </div>
         </>
      );

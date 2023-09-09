@@ -23,7 +23,7 @@ const Login = () => {
     debugger;
     try {
       const response = await axios.post(
-        "http://localhost:4001/login",
+        "https://nord-strom-rack-mern.vercel.app/login",
         formData
       );
       console.log("Login successful:", response.data);
