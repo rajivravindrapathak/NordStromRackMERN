@@ -12,16 +12,16 @@ productController.get('/products', async (req, res) => {
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
     }
-}); 
+});        
 
 // Get a single product by ID
-productController.get('/products/:productId', async (req, res) => {
+productController.get('/products/:id', async (req, res) => {
     try {
-      const product = await ProductModel.findById(req.params.productId);
+      const product = await ProductModel.findById(req.params.id);
       if (!product) {
         return res.status(404).json({ error: 'Product not found' });
       }
-      res.json(product);
+      res.status(200).json({ msg: "product get successfuly", product });
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
     }

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const bagSchema = new mongoose.Schema ({
+    id: { type: String, required: true },
     image_url: { type: String, required: true },
     title: { type: String, required: true },
     subtitle: { type: String, required: true },
