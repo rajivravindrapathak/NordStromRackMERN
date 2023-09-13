@@ -5,11 +5,11 @@ const {userController} = require("./routes/user.routes")
 const {productController} = require("./routes/product.routes")
 
 const { connection } = require("./config/db")
-const { authentication } = require("./middleware/authentication")
+const { authentication } = require("./middleware/authentication")    
 require('dotenv').config()
 
 
-const app = express()
+const app = express()       
 const PORT = process.env.PORT || 4000     
 
 app.use(express.json())  
