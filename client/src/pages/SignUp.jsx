@@ -87,7 +87,7 @@ const SignUp = () => {
                 </Form.Item>
                 <Form.Item>
                   <Button htmlType="submit" type="primary">
-                    SignUp
+                    Register
                   </Button>
                 </Form.Item>
               </div>

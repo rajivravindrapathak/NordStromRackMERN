@@ -2,6 +2,8 @@ import { Button, Col, Row, Spin } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const ProductDetailPage = () => {
   const [currentData, setCurrentData] = useState([]);
@@ -56,6 +58,7 @@ const ProductDetailPage = () => {
 
   return (
     <>
+      <Header />
       <Row>
         {loading === true ? (
           <Spin />
@@ -102,6 +105,7 @@ const ProductDetailPage = () => {
           </>
         )}
       </Row>
+      <Footer />
     </>
   );
 };

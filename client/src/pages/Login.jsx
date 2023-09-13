@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Col, Form, Layout, Row, Spin, message } from "antd";
 import axios from "axios";
+import Header from "../components/Header";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const Login = () => {
 
   return (
     <>
+      <Header />
       <Layout>
         <Row className="modal-mainDiv" gutter={16}>
           <Col className="model-firstDiv"></Col>
@@ -83,8 +85,8 @@ const Login = () => {
               </Form.Item>
               <div className="btn-div">
                 <Form.Item>
-                  <Link to="/register" style={{ textAlign: "center" }}>
-                    <Button type="primary">click here to register</Button>
+                  <Link to="/signup" style={{ textAlign: "center" }}>
+                    <Button type="primary">click here to Register</Button>
                   </Link>
                 </Form.Item>
                 <Form.Item>

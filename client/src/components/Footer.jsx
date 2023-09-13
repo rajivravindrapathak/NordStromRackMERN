@@ -193,7 +193,7 @@ const Footer = () => {
                         <Row className="footer-row-3">
                             <Col xs={24} sm={24} md={17} lg={17} xl={17}>
                                 <p className="footer-col-bx-2">
-                                    {/* Follow us on : &nbsp; */}
+                                    {/* Follow us on : &nbsp; */}   
                                     <FacebookFilled
                                         className="social-icon"
                                         style={{ backgroundColor: "#3b5998", color: "#fff" }}

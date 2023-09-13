@@ -2,6 +2,8 @@ import { Button, Col, Row, message } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const ProductPage = () => {
     const [productData, setProductData] = useState([])
@@ -31,6 +33,7 @@ const ProductPage = () => {
 
     return ( 
         <>
+            <Header />
             <Row gutter={[16, 16]} className="ProductBox">
                 {productData.length > 0 &&
                     productData.map((item, index) => {
@@ -72,6 +75,7 @@ const ProductPage = () => {
                     );
                 })}
             </Row>
+            <Footer />
         </>
     );
 }

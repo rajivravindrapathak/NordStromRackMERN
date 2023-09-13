@@ -3,6 +3,8 @@ import { Button, Carousel, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import ProductBox from "../components/ProductBox";
 import axios from 'axios'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   const [productData, setProductData] = useState([])
@@ -57,6 +59,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Header />
       <Carousel data={carouselData} />
 
       <h1 style={{ textAlign: "center" }}>More to Rack, easier and faster.</h1>
@@ -77,6 +80,7 @@ const HomePage = () => {
 
       <h3 className="trending">Trending now</h3>
       <ProductBox data={productData} />
+      <Footer />
     </>
   );
 };

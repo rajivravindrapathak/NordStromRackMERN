@@ -13,7 +13,7 @@ const AllRoutes = () => {
     return ( 
         <>
             <div>
-                <Header />
+                {/* <Header /> */}
                 <Routes>
                     <Route path="/" element={ <HomePage />} />
                     <Route path="/signup" element={ <SignUp />} />
@@ -22,7 +22,7 @@ const AllRoutes = () => {
                     <Route path="/products/:id" element={ <ProductDetailPage />} />
                     <Route path="/men" element={ <Men />} /> 
                 </Routes>
-                <Footer />  
+                {/* <Footer />   */}
             </div>
         </>
      );
