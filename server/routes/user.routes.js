@@ -70,6 +70,6 @@ userController.post("/get-user-by-id", authentication, async (req, res) => {
     } catch (error) {
         res.send({ msg: error.msg })
     }
-})
+})  
 
 module.exports = { userController }
