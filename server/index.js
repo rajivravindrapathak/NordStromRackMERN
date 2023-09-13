@@ -10,15 +10,15 @@ require('dotenv').config()
 
 
 const app = express()       
-const PORT = process.env.PORT || 4000     
+const PORT = process.env.PORT || 4001     
 
 app.use(express.json())  
 app.use(cors()); 
 
 app.get("/", (req, res) => {
-    res.send("home page")
+    res.send("home page")   
 })
-
+   
 app.use(cors())
 
 app.use("/", userController)

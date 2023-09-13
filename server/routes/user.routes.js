@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken")
 require("dotenv").config()
 
 const { UserModel } = require("../models/User.model") 
+const { authentication } = require("../middleware/authentication")
 
 const userController = Router()
 
@@ -51,12 +52,24 @@ userController.post("/login", async (req, res) => {
             res.status(500).send({ msg: "sometning went wrong, plz try again later", err })
         }
         if(result) {
-            const token = jwt.sign({ userId: user._id}, process.env.JWT_SECRET)
+            const token = jwt.sign({ userId: user._id}, process.env.JWT_SECRET, {
+                // expiresIn: "1d"
+            })
             res.json({ msg: "Login successful", token, userId: user._id })
         } else {
             res.status(401).send({ msg: "Invalid crdential" })
         }
     });
+})
+
+// get user by id
+userController.post("/get-user-by-id", authentication, async (req, res) => {
+    try {
+        const user = await UserModel.findById(req.body.userId)
+        res.send({ msg: "User fetch successfully", data: user })
+    } catch (error) {
+        res.send({ msg: error.msg })
+    }
 })
 
 module.exports = { userController }
