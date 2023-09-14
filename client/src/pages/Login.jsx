@@ -21,7 +21,7 @@ const Login = () => {
   };
 
   const handleLogin = async (formData) => {
-    debugger;
+    // debugger;
     try {
       const response = await axios.post(
         "https://nord-strom-rack-mern.vercel.app/login",
@@ -34,7 +34,7 @@ const Login = () => {
       localStorage.setItem("userId", userId);
       localStorage.setItem("token", token);
 
-      navigate("/notes");
+      navigate("/productpage");
       // You can handle successful sign-up, show a success message, or redirect to another page.
     } catch (error) {
       navigate("/register");
@@ -44,7 +44,7 @@ const Login = () => {
   };
 
   const onFinish = () => {
-    debugger;
+    // debugger;
     handleLogin(formData);
   };
 
@@ -86,7 +86,7 @@ const Login = () => {
               <div className="btn-div">
                 <Form.Item>
                   <Link to="/signup" style={{ textAlign: "center" }}>
-                    <Button type="primary">click here to Register</Button>
+                    <Button type="primary">Click here to SignUp</Button>
                   </Link>
                 </Form.Item>
                 <Form.Item>

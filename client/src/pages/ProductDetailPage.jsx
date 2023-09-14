@@ -16,7 +16,7 @@ const ProductDetailPage = () => {
   const GetSingleData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:4001/products/${id}`);
+      const response = await axios.get(`https://nord-strom-rack-mern.vercel.app/products/${id}`);
       if (response) {
         if (response?.data?.product !== null) {
           let arr = [];
@@ -41,13 +41,15 @@ const ProductDetailPage = () => {
   const handleAddToBag = async () => {
     try {
      
-        const response = await axios.post("https://nord-strom-rack-mern.vercel.app/addtobag"  );
+        const response = await axios.post("https://nord-strom-rack-mern.vercel.app/addtobag", {
+
+        } );
         console.log("add to bag successful:", response.data);
-        const { userId, token } = response.data;
+        // const { userId, token } = response.data;
   
-        // Store the token in local storage (you can use session storage as well)
-        localStorage.setItem("userId", userId);
-        localStorage.setItem("token", token);
+        // // Store the token in local storage (you can use session storage as well)
+        // localStorage.setItem("userId", userId);
+        // localStorage.setItem("token", token);
   
         // navigate("/notes");
         // You can handle successful sign-up, show a success message, or redirect to another page.
@@ -96,7 +98,7 @@ const ProductDetailPage = () => {
                       <p className="ProductBox-content-info-text1">
                         {item.lprice}
                       </p>
-                      <Button className="booknow-btn" onClick={handleAddToBag}>Add to bag!</Button>
+                      <Button className="booknow-btn" onClick={handleAddToBag}>Add to Cart!</Button>
                     </Col>
                   </Row>
                 </Col>

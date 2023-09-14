@@ -11,7 +11,7 @@ const ProductPage = () => {
 
     const getProductData = async () => {
         
-        debugger;
+        // debugger;
         try {
           const response = await axios.get("https://nord-strom-rack-mern.vercel.app/products" ) 
           console.log("API Response:", response.data.data);
