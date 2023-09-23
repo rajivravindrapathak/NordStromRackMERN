@@ -3,6 +3,7 @@ const cors = require("cors")
 
 const {userController} = require("./routes/user.routes")
 const {productController} = require("./routes/product.routes")
+const {bagController} = require("./routes/bag.routes")
 
 const { connection } = require("./config/db")
 const { authentication } = require("./middleware/authentication")    
@@ -24,6 +25,7 @@ app.use(cors())
 app.use("/", userController)
 app.use("/", productController)
 app.use(authentication)
+app.use("/", bagController)
 
 app.listen(PORT, async ()=> {    
     try {

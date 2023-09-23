@@ -9,7 +9,6 @@ const productSchema = new mongoose.Schema ({
     subletter: { type: String, required: true },
     price: { type: String, required: true },       
     lprice: { type: String, required: true },
-
 })
 
 const ProductModel = mongoose.model("product", productSchema)

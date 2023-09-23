@@ -1,30 +1,34 @@
 const { Router } = require('express');
 const { BagModel } = require('../models/Bag.model');
 
+const bagController = Router()
+
 // Create a new product
-productController.post('/addtobag', async (req, res) => {
+bagController.post('/addtobag', async (req, res) => {
     try {
-        const { id, image_url, title, subtitle, subtext, subletter, price, lprice, user_id } = req.body
+        const { id, image_url, title, subtitle, subtext, subletter, price, lprice, userId } = req.body
         const newBag = new BagModel({
             id, 
             image_url, 
-            title, 
+            title,        
             subtitle, 
-            subtext, 
-            subletter, 
+            subtext,     
+            subletter,    
             price, 
             lprice, 
-            user_id
+            userId
         });
+        // console.log("newbag", newBag)
         const savedBag = await newBag.save();
-        res.status(201).json(savedBag);
+        console.log("savedBag", savedBag)
+        res.status(201).json({ msg: "item added in bag", savedBag });
     } catch (error) {
-        res.status(400).json({ error: 'Bad Request' });
+        res.status(400).json({ error: 'res from server item not added' });
     }
 });
 
 // Update a product by ID
-productController.put('/products/:id', async (req, res) => {
+bagController.put('/products/:id', async (req, res) => {
     try {
         const updatedProduct = await BagModel.findByIdAndUpdate(
             req.params.id,
@@ -41,7 +45,7 @@ productController.put('/products/:id', async (req, res) => {
 });
     
 // Delete a product by ID
-productController.delete('/products/:id', async (req, res) => {
+bagController.delete('/products/:id', async (req, res) => {
     try {
         const deletedProduct = await BagModel.findByIdAndDelete(req.params.id);
         if(!deletedProduct) {
@@ -54,4 +58,4 @@ productController.delete('/products/:id', async (req, res) => {
 });
 
 
-module.exports = { productController }
+module.exports = { bagController }

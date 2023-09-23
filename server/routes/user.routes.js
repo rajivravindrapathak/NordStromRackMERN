@@ -49,7 +49,7 @@ userController.post("/login", async (req, res) => {
     const hash = user.password
     bcrypt.compare(password, hash, function(err, result) {
         if(err) {
-            res.status(500).send({ msg: "sometning went wrong, plz try again later", err })
+            res.status(500).send({ msg: "sometning went wrong, plz try again later", err })   
         }
         if(result) {
             const token = jwt.sign({ userId: user._id}, process.env.JWT_SECRET, {
